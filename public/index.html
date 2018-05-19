@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>Control Traffic light</h1>
+<p><form name="trafficForm"  onsubmit="enterValue()" method="post">
+<input id="traffic" type="text"  placeholder="Enter Time in ms" name="trafficTime">
+<input id="trafficButton" type="submit"  value="Submit">
+</form>
+</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script>
+var socket = io();
+function enterValue(){
+	socket.emit("trafficTime", document.forms["trafficForm"]["trafficTime"].value); 
+	//console.log(document.forms["trafficForm"]["trafficTime"].value);
+}
+</script>
+</body>
+</html>

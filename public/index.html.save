@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>Control Traffic light</h1>
+<p><
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script>
+var socket = io();
+function enterValue(){
+	console.log(document.getElementById("traffic").innerHtml);
+}
+</script>
+</body>
+</html>
